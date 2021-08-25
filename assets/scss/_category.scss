@@ -1,0 +1,298 @@
+/*===========================
+       04.CATEGORY css 
+===========================*/
+
+
+.category_area{
+    position: relative;
+    z-index: 9;
+}
+
+.category_shape{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.single_category{
+    @include transition(0.3s);
+    padding: 40px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    position: relative;
+    
+    @media #{$lg}{
+        padding: 30px 20px;
+    }
+    @media #{$xs}{
+        padding: 30px 20px;
+    }
+    @media #{$sm}{
+        padding: 30px 15px;
+    }
+    
+    & .category_icon{
+        & i{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 46px;
+            background-color: $white;
+            border-radius: 50%;
+            @include transition(0.3s);
+            
+            @media #{$xs}{
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+                font-size: 36px;
+            }
+        }
+    }
+    & .category_content{
+        padding-top: 24px;
+        
+        & .category_title{
+            color: $black;
+            font-size: 24px;
+            font-weight: 600;
+
+            @media #{$lg}{
+                font-size: 20px;
+            }
+            @media #{$md}{
+                font-size: 22px;
+            }
+            @media #{$xs}{
+                font-size: 20px;
+            }
+            @media #{$sm}{
+                font-size: 18px;
+            }
+        }
+        & .text{
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 8px;
+            
+            & i{
+                margin-right: 5px;
+            }
+        }
+    }
+    
+    & .category_link{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    &.category_color_1{
+        background-color: rgba($extra-color-1, 0.1);
+        
+        & .category_icon{
+            & i{
+                color: $extra-color-1;
+            }
+        }
+        & .category_content{
+            & .category_title{}
+            & .text{
+                color: $extra-color-1;
+            }
+        }
+        
+        &:hover{
+            @include box-shadow (0px 15px 51px 0px rgba($extra-color-1, 0.19));
+            border-color: $extra-color-1;
+            
+            & .category_icon{
+                & i{
+                    background-color: $extra-color-1;
+                    color: $white;
+                }
+            }
+            & .category_content{
+                & .category_title{}
+                & .text{}
+            }
+        }
+    }
+    
+    &.category_color_2{
+        background-color: rgba($extra-color-2, 0.1);
+        
+        & .category_icon{
+            & i{
+                color: $extra-color-2;
+            }
+        }
+        & .category_content{
+            & .category_title{}
+            & .text{
+                color: $extra-color-2;
+            }
+        }
+        
+        &:hover{
+            @include box-shadow (0px 15px 51px 0px rgba($extra-color-2, 0.19));
+            border-color: $extra-color-2;
+            
+            & .category_icon{
+                & i{
+                    background-color: $extra-color-2;
+                    color: $white;
+                }
+            }
+            & .category_content{
+                & .category_title{}
+                & .text{}
+            }
+        }
+    }
+    
+    &.category_color_3{
+        background-color: rgba($extra-color-3, 0.1);
+        
+        & .category_icon{
+            & i{
+                color: $extra-color-3;
+            }
+        }
+        & .category_content{
+            & .category_title{}
+            & .text{
+                color: $extra-color-3;
+            }
+        }
+        
+        &:hover{
+            @include box-shadow (0px 15px 51px 0px rgba($extra-color-3, 0.19));
+            border-color: $extra-color-3;
+            
+            & .category_icon{
+                & i{
+                    background-color: $extra-color-3;
+                    color: $white;
+                }
+            }
+            & .category_content{
+                & .category_title{}
+                & .text{}
+            }
+        }
+    }
+    
+    &.category_color_4{
+        background-color: rgba($extra-color-4, 0.1);
+        
+        & .category_icon{
+            & i{
+                color: $extra-color-4;
+            }
+        }
+        & .category_content{
+            & .category_title{}
+            & .text{
+                color: $extra-color-4;
+            }
+        }
+        
+        &:hover{
+            @include box-shadow (0px 15px 51px 0px rgba($extra-color-4, 0.19));
+            border-color: $extra-color-4;
+            
+            & .category_icon{
+                & i{
+                    background-color: $extra-color-4;
+                    color: $white;
+                }
+            }
+            & .category_content{
+                & .category_title{}
+                & .text{}
+            }
+        }
+    }
+    
+    &.category_color_5{
+        background-color: rgba($extra-color-5, 0.1);
+        
+        & .category_icon{
+            & i{
+                color: $extra-color-5;
+            }
+        }
+        & .category_content{
+            & .category_title{}
+            & .text{
+                color: $extra-color-5;
+            }
+        }
+        
+        &:hover{
+            @include box-shadow (0px 15px 51px 0px rgba($extra-color-5, 0.19));
+            border-color: $extra-color-5;
+            
+            & .category_icon{
+                & i{
+                    background-color: $extra-color-5;
+                    color: $white;
+                }
+            }
+            & .category_content{
+                & .category_title{}
+                & .text{}
+            }
+        }
+    }
+    
+    &.category_color_6{
+        background-color: rgba($extra-color-6, 0.1);
+        
+        & .category_icon{
+            & i{
+                color: $extra-color-6;
+            }
+        }
+        & .category_content{
+            & .category_title{}
+            & .text{
+                color: $extra-color-6;
+            }
+        }
+        
+        &:hover{
+            @include box-shadow (0px 15px 51px 0px rgba($extra-color-6, 0.19));
+            border-color: $extra-color-6;
+            
+            & .category_icon{
+                & i{
+                    background-color: $extra-color-6;
+                    color: $white;
+                }
+            }
+            & .category_content{
+                & .category_title{}
+                & .text{}
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

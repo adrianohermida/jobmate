@@ -1,0 +1,67 @@
+
+/*===========================
+    17.FAQ css 
+===========================*/
+
+
+.faq_area{}
+
+.faq_accordion{
+    & .accordion{
+        & .card{
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+            margin-top: 30px;
+            overflow: visible;
+            
+            & .card-header{
+                background-color: $theme-color;
+                border: 0;
+                border-radius: 0;
+                padding: 10px 20px;
+                padding-right: 30px;
+                
+                & a{
+                    color: $white;
+                    font-size: 16px;
+                    font-weight: 600;
+                    position: relative;
+                    display: block;
+                    
+                    &::before{
+                        position: absolute;
+                        top: 50%;
+                        @include transform(translateY(-50%) rotate(-180deg));
+                        right: 0;
+                        content: "\f107";
+                        font-family: FontAwesome;
+                        @include transition(0.3s);
+                        font-size: 20px;
+                    }
+                    
+                    &.collapsed{
+                        &::before{
+                            @include transform(translateY(-50%) rotate(0deg));
+                        }
+                    }
+                }
+            }
+            & .card-body{
+                padding: 15px 20px;
+                @include box-shadow (0px 15px 40px 0px rgba($border-color,0.35));
+                @include transition(0.3s);                                  
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,260 @@
+
+/*===========================
+      22.POST JOB css 
+===========================*/
+
+
+.post_job_area{}
+
+.post_job_form{}
+
+.post_job_form{
+    @include box-shadow (0px 15px 40px 0px rgba($border-color,0.35));
+    padding: 30px;
+    
+    & .post_job_title{
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+}
+
+
+.single_post_job{
+    margin-top: 15px;
+    
+    & span,
+    & label{
+        font-size: 16px;
+        color: $body-color;
+        display: block;
+        
+        &[for="file-4"]{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            border-radius: 5px;
+            padding: 0 25px;
+            border: 1px solid $border-color;
+            color: $body-color;
+            position: relative;
+            
+            &::after{
+                position: absolute;
+                content: 'Browse';
+                font-size: 14px;
+                height: 50px;
+                right: -1px;
+                top: -1px;
+                background-color: $theme-color;
+                color: $white;
+                padding: 0 25px;
+                border-top-right-radius: 5px; 
+                border-bottom-right-radius: 5px; 
+            }
+        }
+    }
+    
+    & textarea,
+    & input{
+        width: 100%;
+        height: 50px;
+        padding: 0 25px;
+        border-radius: 5px;
+        border: 1px solid $border-color;
+        color: $black;
+        @include transition(0.3s);
+        @include placeholder{
+            color: $body-color;
+        }
+        
+            
+        &:focus{
+            border-color: $theme-color;
+        }
+        
+        &[type="file"]{
+            display: none;
+        }
+    }
+    
+    & textarea{
+        height: 180px;
+        padding-top: 10px;
+        resize: none;
+    }
+    
+    & .nice-select{
+        float: none;
+        border-radius: 5px;
+        border: 1px solid $border-color;
+        height: 50px;
+        line-height: 48px;
+
+        &::after{
+            width: 8px;
+            height: 8px;
+            right: 15px;
+            border-color: $body-color;
+        }
+
+        & .current{
+            font-size: 15px;
+            color: $body-color;
+            font-weight: 600;
+            line-height: 48px;
+        }
+        & .list{
+            width: 100%;
+            border-radius: 0;
+
+            & .option{
+                font-size: 14px;
+                color: #a4a4a4;
+                line-height: 30px;
+                min-height: 30px;
+            }
+        }
+    }
+    
+    & p{
+        padding-top: 15px;
+        font-size: 15px;
+    }
+    
+    & .note-editor{
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        
+        & .note-toolbar{
+            padding: 10px 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            background-color: $gray;
+            
+            & .note-btn-group{
+                margin: 0;
+                background-color: $white;
+                
+                & .note-btn{
+                    background-color: $white;
+                    position: relative;
+                    padding: 6px;
+                    padding-right: 15px;
+                    font-size: 14px;
+                    border-radius: 0;
+                    
+                    &:focus{
+                        @include box-shadow (none);
+                        outline: 0;
+                    }
+                    
+                    & .note-current-fontname{
+                        color: $black;
+                        font-size: 14px;
+                    }
+                    
+                    & i{
+                        color: $black;
+                    }
+                    
+                    &::after{
+                        position: absolute;
+                        top: 50%;
+                        right: 3px;
+                        @include transform(translateY(-50%));
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
+
+
+.gj-picker-bootstrap{
+    
+    & div[role="navigator"]{
+        & div{
+            font-size: 16px;
+            color: $body-color;
+        }
+        & div[role="period"]{
+            font-weight: 600;
+            font-size: 16px;
+            color: $body-color;
+        }
+    }
+    
+    & table{
+        & tr{
+            & th{
+                & div{
+                    font-size: 16px;
+                    font-weight: 600;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                }
+            }
+        }
+        & tr{
+            & td{
+                                
+                &.other-month{
+                    
+                    & div{
+                        color: $black;
+                    }
+                }
+                &.current-month{
+                    
+                    & div{
+                        color: $body-color;
+                    }
+                }
+                
+                &.today {
+                    
+                    & div{
+                        color: $theme-color;
+                    }
+                }
+                
+                & div{
+                    font-size: 16px;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    @include transition(0.3s);
+                }
+                
+                &.gj-cursor-pointer{
+                    
+                    & div{
+                        &:hover{
+                            color: $white;
+                            background-color: $theme-color;
+                        }
+                    }
+                    
+                    &.selected{
+                        & div{
+                            color: $white;
+                            background-color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

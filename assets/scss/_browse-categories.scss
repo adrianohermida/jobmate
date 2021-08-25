@@ -1,0 +1,65 @@
+
+/*===========================
+   19.BROWSE CATEGORY css 
+===========================*/
+
+
+.browse_categories_area{}
+
+
+.single_categories_list{
+    & .categories_title{
+        background-color: $gray;
+        padding: 10px 20px;
+        
+        & .title{
+            font-size: 16px;
+            font-weight: 600;
+            
+            & span{
+                font-size: 14px;
+                color: $body-color;
+            }
+        }
+    }
+    
+    & .single_list{
+        background-color: $white;
+        @include box-shadow (0px 15px 40px 0px rgba($border-color,0.35));
+        padding: 10px 0;
+        margin-top: 30px;
+        
+        & ul{
+            & li{
+                padding: 5px 20px;
+                
+                & a{
+                    font-size: 14px;
+                    color: $body-color;
+                    @include transition(0.3s);
+                    
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

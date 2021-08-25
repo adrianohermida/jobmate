@@ -1,0 +1,1070 @@
+
+/*===========================
+     18.PROFILE css 
+===========================*/
+
+
+.profile_area{}
+
+.profile_sidebar{
+    @include box-shadow (0px 0px 40px 0px rgba($border-color, 0.5));
+    background-color: $white;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 110px;
+    left: 0;
+    
+    & .profile_title{
+        background-color: $gray;
+        padding: 15px 25px;
+        
+        @media #{$md}{
+            padding: 12px 20px;
+        }
+        
+        & .title{
+            font-size: 20px;
+            font-weight: 600;
+            
+            @media #{$md}{
+                font-size: 18px;
+            }
+        }
+    }
+    & .profile_list{
+        & ul{
+            & li{
+                & a{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $body-color;
+                    padding: 15px 25px;
+                    border-bottom: 1px solid rgba($border-color, 0.5);
+                    display: block;
+                    position: relative;
+                    
+                    @media #{$md}{
+                        font-size: 14px;
+                        padding: 12px 20px;
+                    }
+                    
+                    & span{
+                        width: 25px;
+                        height: 25px;
+                        line-height: 25px;
+                        text-align: center;
+                        background-color: $theme-color;
+                        color: $white;
+                        font-weight: 600;
+                        font-size: 13px;
+                        border-radius: 50%;
+                        float: right;
+                    }
+                    
+                    &.active,
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+                
+                &:last-child{
+                    & a{
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*===== Resume =====*/
+
+.profile_resume{
+    padding: 50px;
+    @include box-shadow (0px 0px 40px 0px rgba($border-color, 0.5));
+    background-color: $white;
+    
+    @media #{$lg}{
+        padding: 30px;
+    }
+    @media #{$md}{
+        padding: 30px;
+    }
+    @media #{$xs}{
+        padding: 20px;
+    }
+    @media #{$sm}{
+        padding: 30px;
+    }
+    
+    & .resume_title{
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 0;
+        
+        @media #{$md}{
+            font-size: 18px;
+        }
+    }
+    
+    & .resume_author{
+        padding-bottom: 25px;
+        
+        & .author_image{
+            width: 125px;
+        }
+        & .author_name{
+            padding-left: 30px;
+            
+            @media #{$xs}{
+                padding-left: 0;
+                padding-top: 25px;
+            }
+            @media #{$sm}{
+                padding-left: 30px;
+                padding-top: 0;
+            }
+            
+            & .name_title{
+                font-size: 18px;
+                font-weight: 600;
+                padding-bottom: 5px;
+            }
+            & p{
+                margin-top: 5px;
+                font-size: 15px;
+                
+                @media #{$md}{
+                    font-size: 14px;
+                }
+            }
+            & .social{
+                padding-top: 10px;
+                
+                & li{
+                    display: inline-block;
+                    margin-right: 10px;
+                    
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    
+                    & a{
+                        width: 35px;
+                        height: 35px;
+                        line-height: 33px;
+                        border: 1px solid $border-color;
+                        border-radius: 50%;
+                        font-size: 16px;
+                        color: $body-color;
+                        text-align: center;
+                        @include transition(0.3s);
+                        
+                        @media #{$md}{
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                            font-size: 15px;
+                        }
+                        
+                        &:hover{
+                            color: $white;
+                            border-color: $theme-color;
+                            background-color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    & .resume_about{
+        border-top: 1px solid $border-color;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        
+        & p{
+            padding-top: 15px;
+            
+            @media #{$md}{
+                font-size: 14px;
+            }
+        }
+    }
+    
+    & .resume_experience{
+        border-top: 1px solid $border-color;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        
+        & .experience{
+            margin-top: 25px;
+            
+            & .experience_title{
+                font-size: 18px;
+                font-weight: 600;
+            }
+            & .sub_title{
+                font-weight: 600;
+                font-size: 16px;
+                color: $body-color;
+                margin-top: 10px;
+            }
+            & span{
+                margin-top: 10px;
+                
+                @media #{$md}{
+                    font-size: 14px;
+                }
+            }
+            & p{
+                font-size: 15px;
+                margin-top: 10px;
+                
+                @media #{$md}{
+                    font-size: 14px;
+                }
+            }
+            & .projects{
+                color: $theme-color;
+                font-weight: 600;
+                margin-top: 15px;
+                
+                @media #{$md}{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+    
+    & .resume_education{
+        border-top: 1px solid $border-color;
+        padding-top: 28px;
+        
+        & .education{
+            margin-top: 25px;
+            
+            & .education_title{
+                font-size: 16px;
+                font-weight: 600;
+            }
+            
+            & p{
+                font-size: 15px;
+                margin-top: 10px;
+                
+                @media #{$md}{
+                    font-size: 14px;
+                }
+            }
+            
+            & span{
+                font-size: 15px;
+                
+                @media #{$md}{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*===== Bookmark =====*/
+
+.profile_bookmark{
+    padding: 50px;
+    @include box-shadow (0px 0px 40px 0px rgba($border-color, 0.5));
+    background-color: $white;
+    
+    @media #{$lg}{
+        padding: 30px;
+    }
+    @media #{$md}{
+        padding: 30px;
+    }
+    @media #{$xs}{
+        padding: 20px;
+    }
+    @media #{$sm}{
+        padding: 30px;
+    }
+    
+    
+    & .profile_bookmark_title{
+        font-size: 20px;
+        font-weight: 600;
+        
+        @media #{$md}{
+            font-size: 18px;
+        }
+    }
+    
+    & .single_bookmark{
+        @include box-shadow (0px 0px 40px 0px rgba($border-color, 0.5));
+        padding: 15px;
+        margin-top: 30px;
+        
+        & .bookmark_logo{
+            & img{
+                width: 80px;
+                border-radius: 50%;
+                
+                @media #{$xs}{
+                    width: 60px;
+                }
+                @media #{$sm}{
+                    width: 80px;
+                }
+            }
+        }
+        & .bookmark_details{
+            padding-left: 15px;
+            
+            & .title{
+                & a{
+                    font-size: 18px;
+                    font-weight: 600;
+                    @include transition(0.3s);
+                    color: $black;
+                    
+                    @media #{$lg}{
+                        font-size: 16px;
+                    }
+                    @media #{$md}{
+                        font-size: 16px;
+                    }
+                    @media #{$xs}{
+                        font-size: 16px;
+                    }
+
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+            }
+            & .company_neme{
+                font-size: 15px;
+                margin-top: 5px;
+                
+                @media #{$lg}{
+                    font-size: 14px;
+                }
+                @media #{$md}{
+                    font-size: 14px;
+                }
+            }
+        }
+        & .bookmark_location{
+            padding-right: 15px;
+            
+            @media #{$xs}{
+                padding-top: 10px;
+            }
+            @media #{$sm}{
+                padding-top: 0;
+            }
+            
+            & .location{
+                font-size: 15px;
+                
+                @media #{$lg}{
+                    font-size: 14px;
+                }
+                @media #{$md}{
+                    font-size: 14px;
+                }
+            }
+        }
+        & .bookmark_time{
+            padding-right: 15px;
+            
+            @media #{$xs}{
+                padding-top: 10px;
+            }
+            @media #{$sm}{
+                padding-top: 0;
+            }
+            
+            & .time{
+                font-size: 15px;
+                font-weight: 600;
+                color: $theme-color;
+                
+                @media #{$lg}{
+                    font-size: 14px;
+                }
+                @media #{$md}{
+                    font-size: 14px;
+                }
+            }
+        }
+        & .bookmark_btn{
+            
+            @media #{$xs}{
+                padding-top: 10px;
+            }
+            @media #{$sm}{
+                padding-top: 0;
+            }
+            
+            & .main-btn{
+                height: 35px;
+                line-height: 33px;
+                padding: 0 25px;
+                font-size: 14px;
+                
+                @media #{$lg}{
+                    padding: 0 15px;
+                }
+                @media #{$md}{
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+/*===== Notifications =====*/
+
+.profile_notifications{
+    padding: 50px;
+    @include box-shadow (0px 0px 40px 0px rgba($border-color, 0.5));
+    background-color: $white;
+    
+    @media #{$lg}{
+        padding: 30px;
+    }
+    @media #{$md}{
+        padding: 30px;
+    }
+    @media #{$xs}{
+        padding: 20px;
+    }
+    @media #{$sm}{
+        padding: 30px;
+    }
+    
+    & .profile_notifications_title{
+        font-size: 20px;
+        font-weight: 600;
+        
+        @media #{$md}{
+            font-size: 18px;
+        }
+    }
+    
+    & .single_notifications{
+        border-bottom: 1px solid $border-color;
+        padding: 20px 0;
+        
+        & .notifications_logo{
+            width: 70px;
+            border-radius: 50%;
+        }
+        & .notifications_content{
+            padding-left: 20px;
+            
+            @media #{$xs}{
+                padding-left: 0;
+                padding-top: 15px;
+            }
+            @media #{$sm}{
+                padding-left: 15px;
+                padding-top: 0;
+            }
+            
+            p{
+                font-size: 15px;
+            }
+            & .time{
+                font-size: 14px;
+                
+                & i{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*===== Manage Applications =====*/
+
+.profile_manage_applications{
+    padding: 50px;
+    @include box-shadow (0px 0px 40px 0px rgba($border-color, 0.5));
+    background-color: $white;
+    
+    @media #{$lg}{
+        padding: 30px;
+    }
+    @media #{$md}{
+        padding: 30px;
+    }
+    @media #{$xs}{
+        padding: 20px;
+    }
+    @media #{$sm}{
+        padding: 30px;
+    }
+    
+    & .profile_applications_title{
+        font-size: 20px;
+        font-weight: 600;
+        
+        @media #{$md}{
+            font-size: 18px;
+        }
+    }
+    
+    & .single_manage_applications{
+        border-bottom: 1px solid $border-color;
+        padding: 20px 0;
+        
+        & .manage_applications_companies{
+            width: 35%;
+            
+            @media #{$xs}{
+                width: 100%;
+            }
+            @media #{$sm}{
+                width: 43%;
+            }
+            
+            & .applications_companies_logo{
+                & img{
+                    width: 70px;
+                    border-radius: 50%;
+                    
+                    @media #{$xs}{
+                        width: 60px;
+                    }
+                }
+            }
+            & .applications_companies_content{
+                max-width: 150px;
+                margin-left: 15px;
+                
+                & .companies_name{
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+                & span{
+                    font-size: 14px;
+                    margin-top: 3px;
+                }
+            }
+        }
+        
+        & .manage_applications_meta{
+            width: 65%;
+            
+            @media #{$xs}{
+                width: 100%;
+                padding-top: 10px;
+            }
+            @media #{$sm}{
+                width: 57%;
+                padding-top: 0;
+            }
+            
+            & .applications_time{
+                & p{
+                    font-size: 14px;
+                    padding: 3px 13px;
+                    display: inline-block;
+                    color: $black;
+                    border-radius: 50px;
+                    
+                    @media #{$xs}{
+                        font-size: 13px;
+                        padding: 1px 8px;
+                    }
+                    
+                    &.time_color-1{
+                        background-color: rgba($extra-color-1, 0.3);
+                    }
+                    &.time_color-2{
+                        background-color: rgba($extra-color-6, 0.3);
+                    }
+                }
+            }
+            
+            & .applications_date{
+                & p{
+                    font-size: 15px;
+                    display: inline-block;
+                    
+                    @media #{$xs}{
+                        font-size: 13px;
+                    }
+                }
+            }
+            & .applications_apply{
+                & p{
+                    font-size: 15px;
+                    display: inline-block;
+                    
+                    @media #{$xs}{
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*===== Manage Resume =====*/
+
+.profile_manage_resume{
+    padding: 50px;
+    @include box-shadow (0px 0px 40px 0px rgba($border-color, 0.5));
+    background-color: $white;
+    
+    @media #{$lg}{
+        padding: 30px;
+    }
+    @media #{$md}{
+        padding: 30px;
+    }
+    @media #{$xs}{
+        padding: 20px;
+    }
+    @media #{$sm}{
+        padding: 30px;
+    }
+    
+    & .manage_resume_title{
+        font-size: 20px;
+        font-weight: 600;
+        
+        @media #{$md}{
+            font-size: 18px;
+        }
+    }
+    
+    & .single_manage_resume{
+        @include box-shadow (0px 15px 40px 0px rgba($border-color,0.35));
+        margin-top: 30px;
+        
+        & .manage_resume_author{
+            background-color: $theme-color-2;
+            padding: 20px 30px;
+            
+            & .resume_author{
+                & .author_image{
+                    & img{
+                        width: 70px;
+                        border-radius: 50%;
+                    }
+                }
+                & .author_name{
+                    padding-left: 20px;
+                    
+                    & .name{
+                        & a{
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: $black;
+                        }
+                    }
+                    & p{
+                        font-size: 15px;
+                        font-weight: 600;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            & .resume_meta{
+                text-align: right;
+                
+                & .location,
+                & .price{
+                    & i{
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        
+        & .manage_resume_update_date{
+            padding: 5px 30px 15px ;
+            
+            & .status{
+                font-size: 15px;
+                font-weight: 600;
+                padding-top: 10px;
+                
+                & span{
+                    font-weight: 400;
+                }
+            }
+            & .action_btn{
+                padding-top: 10px;
+                
+                & li{
+                    display: inline-block;
+                    margin-left: 15px;
+
+                    & a{
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        color: $body-color;
+                        
+                        &.delete{
+                            background-color: #ef4d42;
+                            color: $white;
+                            padding: 3px 15px;
+                            border-radius: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    & .manage_resume_btn{
+        margin-top: 30px;
+        
+        & .main-btn{}
+    }
+}
+
+
+
+/*===== Manage Jobs =====*/
+
+.profile_manage_jobs{
+    padding: 50px;
+    @include box-shadow (0px 0px 40px 0px rgba($border-color, 0.5));
+    background-color: $white;
+    
+    @media #{$lg}{
+        padding: 30px;
+    }
+    @media #{$md}{
+        padding: 30px;
+    }
+    @media #{$xs}{
+        padding: 20px;
+    }
+    @media #{$sm}{
+        padding: 30px;
+    }
+    
+    & .manage_jobs_title{
+        font-size: 20px;
+        font-weight: 600;
+        
+        @media #{$md}{
+            font-size: 18px;
+        }
+    }
+        
+    & .manage_jobs{
+        & .table{
+            margin-bottom: 0;
+            
+            & thead{
+                
+                & tr{
+                    border-bottom: 1px solid $border-color;
+                    
+                    & th{
+                        border: 0;
+                        vertical-align: middle;
+                        padding: 15px 0;
+                        
+                        & p{
+                            font-size: 14px;
+                            text-transform: uppercase;
+                        }
+                        
+                        &.name{
+                            padding-right: 100px;
+                        }
+                        &.contract{                            
+                            & p{
+                                width: 140px;
+                            }
+                        }
+                        &.candidates{
+                            padding-right: 30px;
+                        }
+                        &.featured{}
+                    }
+                }
+            }
+            & tbody{
+                
+                & tr{
+                    border-bottom: 1px solid $border-color;
+                    
+                    & td{
+                        border: 0;
+                        vertical-align: middle;
+                        padding: 25px 0;
+                        
+                        &.name{
+                            & .job_alert_name{
+                                & .job_name{
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: $black;
+                                }
+                                & .location{
+                                    font-size: 14px;
+                                    color: $body-color;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                        &.contract{
+                            & .time{
+                                font-size: 14px;
+                                padding: 3px 13px;
+                                display: inline-block;
+                                color: $black;
+                                border-radius: 50px;
+
+                                @media #{$xs}{
+                                    font-size: 13px;
+                                    padding: 1px 8px;
+                                }
+
+                                &.time_color-1{
+                                    background-color: rgba($extra-color-1, 0.3);
+                                }
+                                &.time_color-2{
+                                    background-color: rgba($extra-color-6, 0.3);
+                                }
+                            }
+                        }
+                        &.candidates{
+                            & img{
+                                width: 60px;
+                                border-radius: 50%;
+                            }
+                        }
+                        &.frequency{
+                            & p{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*===== Job Alert =====*/
+
+.profile_job_alert{
+    padding: 50px;
+    @include box-shadow (0px 0px 40px 0px rgba($border-color, 0.5));
+    background-color: $white;
+    
+    @media #{$lg}{
+        padding: 30px;
+    }
+    @media #{$md}{
+        padding: 30px;
+    }
+    @media #{$xs}{
+        padding: 20px;
+    }
+    @media #{$sm}{
+        padding: 30px;
+    }
+    
+    & .profile_job_alert_title{
+        font-size: 20px;
+        font-weight: 600;
+        
+        @media #{$md}{
+            font-size: 18px;
+        }
+    }
+    
+    & .job_alert_content{
+        & .table{
+            margin-bottom: 0;
+            
+            & thead{
+                
+                & tr{
+                    border-bottom: 1px solid $border-color;
+                    
+                    & th{
+                        border: 0;
+                        vertical-align: middle;
+                        padding: 15px 0;
+                        
+                        & p{
+                            font-size: 14px;
+                            text-transform: uppercase;
+                        }
+                        
+                        &.name{
+                            padding-right: 100px;
+                        }
+                        &.keywords{
+                            padding-right: 30px;
+                        }
+                        &.contract{                            
+                            & p{
+                                width: 140px;
+                            }
+                        }
+                        &.frequency{}
+                    }
+                }
+            }
+            & tbody{
+                
+                & tr{
+                    border-bottom: 1px solid $border-color;
+                    
+                    & td{
+                        border: 0;
+                        vertical-align: middle;
+                        padding: 25px 0;
+                        
+                        &.name{
+                            & .job_alert_name{
+                                & .job_name{
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: $black;
+                                }
+                                & .location{
+                                    font-size: 14px;
+                                    color: $body-color;
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                        &.keywords{
+                            & p{
+                                font-size: 14px;
+                            }
+                        }
+                        &.contract{
+                            & .time{
+                                font-size: 14px;
+                                padding: 3px 13px;
+                                display: inline-block;
+                                color: $black;
+                                border-radius: 50px;
+
+                                @media #{$xs}{
+                                    font-size: 13px;
+                                    padding: 1px 8px;
+                                }
+
+                                &.time_color-1{
+                                    background-color: rgba($extra-color-1, 0.3);
+                                }
+                                &.time_color-2{
+                                    background-color: rgba($extra-color-6, 0.3);
+                                }
+                            }
+                        }
+                        &.frequency{
+                            & p{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*===== Change Password =====*/
+
+.profile_change_password{
+    padding: 50px;
+    @include box-shadow (0px 0px 40px 0px rgba($border-color, 0.5));
+    background-color: $white;
+    
+    @media #{$lg}{
+        padding: 30px;
+    }
+    @media #{$md}{
+        padding: 30px;
+    }
+    @media #{$xs}{
+        padding: 20px;
+    }
+    @media #{$sm}{
+        padding: 30px;
+    }
+    
+    & .profile_change_password_title{
+        font-size: 20px;
+        font-weight: 600;
+        
+        @media #{$md}{
+            font-size: 18px;
+        }
+    }
+    
+    & .change_password_content{
+        & .single_password{
+            margin-top: 30px;
+            
+            & label{
+                font-size: 14px;
+                color: $body-color;
+            }
+            & input{
+                width: 100%;
+                height: 45px;
+                padding: 0 25px;
+                border: 1px solid $border-color;
+                border-radius: 5px;
+                @include transition(0.3s);
+            
+                &:focus{
+                    border-color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,138 @@
+/*===========================
+      09.SUBSCRIBE css 
+===========================*/
+
+
+.subscribe_area{
+    & .subscribe_wrapper{
+        background-color: #f0fafc;
+        padding-top: 55px;
+        padding-bottom: 170px;
+        position: relative;
+        z-index: 9;
+        
+        @media #{$xs}{
+            padding: 55px 15px 60px;
+        }
+        
+        &::before{
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 165px;
+            background-image: url(../images/subscribe-shape-1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            z-index: -1;
+            
+            @media #{$md}{
+                height: 135px;
+            }
+        }
+        
+        & .subscribe_shape_1{
+            position: absolute;
+            left: -148px;
+            bottom: 0;
+            z-index: -1;
+            
+            @media #{$xs}{
+                left: -110px;
+            }
+            
+            & img{
+                @media #{$xs}{
+                    width: 110px;
+                }
+            }
+        }
+        & .subscribe_shape_2{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            
+            & img{
+                @media #{$xs}{
+                    width: 110px;
+                }
+            }
+        }
+        
+        & .subscribe_content{}
+        & .subscribe_form{
+            position: relative;
+            margin-top: 10px;
+            
+            & input{
+                width: 100%;
+                height: 80px;
+                border: 2px solid $theme-color;
+                padding: 0 30px;
+                border-radius: 5px;
+                font-size: 16px;
+                font-weight: 600;
+                color: $black;
+                @include transition(0.3s);
+                @include placeholder{
+                    color: $body-color;
+                }
+            
+                &:focus{
+                    border-color: $theme-color;
+                }
+                
+                @media #{$xs}{
+                    height: 60px;
+                    padding: 0 20px;
+                }
+            }
+            & .main-btn{
+                height: 64px;
+                line-height: 60px;
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                @include box-shadow (0px 32px 29px 0px rgba($theme-color, 0.30));
+                
+                @media #{$xs}{
+                    position: relative;
+                    height: 50px;
+                    line-height: 46px;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    margin-top: 10px;
+                }
+                
+                @media #{$sm}{
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    margin-top: 0;
+                    width: auto;
+                    left: auto;
+                    padding: 0 25px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

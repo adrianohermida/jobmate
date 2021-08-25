@@ -1,0 +1,120 @@
+/*===========================
+    07.TOP COMPANIES css 
+===========================*/
+
+
+.top_companies{
+    padding-bottom: 195px;
+}
+
+.single_companies{
+    background-color: rgba($gray, 0.6);
+    padding: 40px 20px;
+    
+    @media #{$lg}{
+        padding: 30px 15px;
+    }
+    @media #{$md}{
+        padding: 30px 15px;
+    }
+    @media #{$xs}{
+        padding: 30px 15px;
+    }
+    
+    & .companies_icon{
+        & img{
+            width: 100px;
+            display: inline-block;
+            
+            @media #{$lg}{
+                width: 80px;
+            }
+            @media #{$md}{
+                width: 80px;
+            }
+            @media #{$xs}{
+                width: 80px;
+            }
+        }
+    }
+    
+    & .companies_content{
+        padding-top: 27px;
+        
+        & .companies_title{
+            & a{
+                font-size: 24px;
+                font-weight: 600;
+                color: $black;
+                @include transition(0.3s);
+                
+                @media #{$lg}{
+                    font-size: 20px;
+                }
+                @media #{$md}{
+                    font-size: 20px;
+                }
+                @media #{$xs}{
+                    font-size: 20px;
+                }
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+        & .sub_title{
+            font-size: 16px;
+            color: $theme-color;
+            margin-top: 8px;
+        }
+    }
+    & .companies_btn{
+        margin-top: 28px;
+        
+        & .main-btn{
+            @media #{$lg}{
+                padding: 0 30px;
+            }
+            @media #{$md}{
+                padding: 0 30px;
+            }
+            @media #{$xs}{
+                padding: 0 30px;
+            }
+        }
+    }
+}
+
+
+.companies_active{
+    & .slick-dots{
+        text-align: center;
+        width: 100%;
+        margin-top: 17px;
+        
+        & li{
+            display: inline-block;
+            margin: 0 4px;
+            
+            & button{
+                font-size: 0;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                padding: 0;
+                border: 0;
+                background-color: rgba($theme-color, 0.2);
+            }
+            
+            &.slick-active{
+                & button{
+                    background-color: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+

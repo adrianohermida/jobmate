@@ -1,0 +1,133 @@
+/*===========================
+       05.ABOUT css 
+===========================*/
+
+
+.about_area{
+    position: relative;
+    z-index: 5;
+    
+    @media #{$md}{
+        
+    }
+    @media #{$xs}{
+    }
+}
+
+.about_shape{
+    position: absolute;
+    top: -220px;
+    right: 0;
+    z-index: -1;
+    
+    @media #{$xs}{
+        top: -50px;
+    }
+    
+    & img{
+        @media #{$xs}{
+            width: 180px;
+        }
+    }
+}
+
+.about_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    
+    @media #{$md}{
+        position: relative;
+        width: 720px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    @media #{$xs}{
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    @media #{$sm}{
+        width: 540px;
+    }
+    
+    & .image{
+        padding-right: 30px;
+        
+        @media #{$md}{
+            padding-right: 0;
+            padding-bottom: 50px;
+        }
+        @media #{$xs}{
+            padding-right: 0;
+            padding-bottom: 50px;
+        }
+        
+        & img{
+            
+        }
+    }
+}
+
+
+
+.about_content{
+    padding-top: 115px;
+    padding-bottom: 115px;
+    
+    @media #{$lg}{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    @media #{$md}{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    @media #{$xs}{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    & p{
+        margin-top: 28px;
+    }
+    & .about_btn{
+        padding-top: 25px;
+        
+        & li{
+            display: inline-block;
+            margin-right: 30px;
+            margin-top: 10px;
+            
+            &:last-child{
+                margin-right: 0;
+            }
+            
+            & .about_resume{
+                font-size: 16px;
+                color: $theme-color;
+                
+                & i{
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

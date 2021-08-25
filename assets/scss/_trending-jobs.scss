@@ -1,0 +1,174 @@
+/*===========================
+    06.TRENDING JOB css 
+===========================*/
+
+
+.trending_jobs{}
+
+
+.jobs_tabs_menu{
+    & .nav{
+        background-color: rgba($theme-color, 0.1);
+        border: 1px solid $theme-color;
+        border-radius: 5px;
+        padding: 5px;
+        
+        & .nav-item{
+            & a{
+                padding:  0 30px;
+                font-size: 15px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $theme-color;
+                line-height: 45px;
+                border-radius: 5px;
+                @include transition(0.3s);
+                
+                @media #{$md}{
+                    padding: 0 18px;
+                    font-size: 14px;
+                    line-height: 40px;
+                }
+                @media #{$xs}{
+                    padding: 0 18px;
+                    font-size: 14px;
+                    line-height: 40px;
+                }
+
+                &.active{
+                    background-color: $theme-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+
+
+.single_jobs{
+    background-color: $white;
+    padding: 50px 25px;
+    border: 2px solid $white;
+    @include transition(0.3s);
+    
+    &.jobs_border{
+        border-color: rgba($theme-color, 0.5);
+    }
+    
+    @media #{$lg}{
+        padding: 40px 20px;
+    }
+    @media #{$xs}{
+        padding: 40px 20px;
+    }
+    @media #{$sm}{
+        padding: 20px 15px;
+    }
+    
+    & .jobs_image{
+        & img{
+            width: 125px;
+            border: 2px solid $theme-color;
+            border-radius: 10px;
+            
+            @media #{$lg}{
+                width: 115px;
+            }
+            @media #{$xs}{
+                width: 115px;
+            }
+            @media #{$sm}{
+                width: 85px;
+            }
+        }
+    }
+    & .jobs_content{
+        padding-top: 25px;
+        
+        @media #{$sm}{
+            padding-top: 15px;
+        }
+        
+        & .jobs_title{
+            & a{
+                font-size: 24px;
+                font-weight: 600;
+                color: $black;
+                @include transition(0.3s);
+                
+                @media #{$lg}{
+                    font-size: 20px;
+                }
+                @media #{$xs}{
+                    font-size: 20px;
+                }
+                @media #{$sm}{
+                    font-size: 18px;
+                }
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+        & .sub_title{
+            color: $theme-color;
+            margin-top: 8px;
+            
+        }
+    }
+    & .jobs_meta{
+        padding-bottom: 15px;
+        border-bottom: 1px solid $theme-color;
+        
+        @media #{$sm}{
+            display: block !important;
+        }
+        
+        & p{
+            font-size: 14px;
+            padding-top: 15px;
+            font-weight: 600;
+            
+            @media #{$sm}{
+                padding-top: 5px;
+            }
+            
+            & i{
+                margin-right: 5px;
+                color: $theme-color;
+            }
+            
+            &.location{}
+            &.time{}
+        }
+    }
+    & .jobs_btn{
+        padding-top: 30px;
+        
+        @media #{$sm}{
+            padding-top: 15px;
+        }
+    }
+    
+    &:hover{
+        border-color: $theme-color;
+        @include box-shadow (0px 10px 20px 0px rgba($theme-color, 0.25));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+
+/*===========================
+    16.PRIVACY POLICY css 
+===========================*/
+
+
+.privacy_policy_content{
+    padding: 50px;
+    background-color: $white;
+    @include box-shadow (0px 0px 40px 0px rgba($border-color,0.35));
+}
+ 
+.privacy_title{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.privacy_info{
+    & .info_title{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    & p{
+        margin-top: 25px;
+        font-size: 15px;
+    }
+    
+    & ul{
+        padding-left: 30px;
+        
+        & li{
+            font-size: 15px;
+            margin-top: 5px;
+        }
+    }
+}
+
+
+
+
+

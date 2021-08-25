@@ -1,0 +1,43 @@
+
+/*===========================
+     15.HOW WORK css 
+===========================*/
+
+
+.single_work{
+    & .work_icon{
+        & i{
+            font-size: 50px;
+            color: $theme-color;
+            line-height: 50px;
+        }
+    }
+    & .work_content{
+        & .work_title{
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 20px;
+            
+            @media #{$xs}{
+                font-size: 20px;
+            }
+            @media #{$sm}{
+                font-size: 24px;
+            }
+        }
+        & p{
+            margin-top: 15px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

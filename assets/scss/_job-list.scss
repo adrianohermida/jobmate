@@ -1,0 +1,333 @@
+
+/*===========================
+     12.JOB LIST css 
+===========================*/
+
+
+.job_list_area{
+    
+}
+
+.sidebar_toggler{
+    margin-top: 30px;
+    
+    & .sidebar_btn{
+        background: none;
+        border: 0;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 0;
+        color: $body-color;
+    }
+}
+
+
+.job_list_filter{
+    background-color: $gray;
+    padding: 10px 30px 30px;
+    
+    & .single_filter{
+        margin-top: 20px;
+        
+        & input{
+            width: 100%;
+            height: 65px;
+            border-radius: 5px;
+            border: 0;
+            padding: 0 20px;
+            color: $body-color;
+            font-weight: 600;
+            
+            @include placeholder{
+                opacity: 1;
+                color: $body-color;
+            }
+        }
+        
+        & .nice-select{
+            float: none;
+            border-radius: 5px;
+            width: 100%;
+            height: 65px;
+            border: 0;
+
+            &::after{
+                width: 8px;
+                height: 8px;
+                right: 15px;
+                border-color: $body-color;
+            }
+
+            & .current{
+                font-size: 15px;
+                color: $body-color;
+                font-weight: 600;
+                line-height: 65px;
+            }
+            & .list{
+                width: 100%;
+                border-radius: 0;
+
+                & .option{
+                    font-size: 14px;
+                    color: $body-color;
+                    line-height: 30px;
+                    min-height: 30px;
+                }
+            }
+        }
+        
+        & .main-btn{
+            width: 100%;
+            height: 65px;
+            line-height: 65px;
+            
+            &:hover{
+                @include box-shadow (0px 0px 20px 0px rgba($border-color,0.3));
+            }
+        }
+    }
+}
+
+.job_list_main_content{
+    padding-top: 30px;
+    
+    @media #{$md}{
+        padding-top: 0;
+    }
+    @media #{$xs}{
+        padding-top: 0;
+    }
+}
+
+.job_list_sidebar{
+    @media #{$md}{
+        position: fixed;
+        top: 0;
+        left: -360px;
+        width: 360px;
+        height: 100%;
+        padding: 30px;
+        padding-top: 90px;
+        z-index: 999;
+        background-color: $white;
+        overflow: auto;
+        @include transition(0.3s);
+    }
+    @media #{$xs}{
+        position: fixed;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        height: 100%;
+        padding: 15px;
+        padding-top: 90px;
+        z-index: 999;
+        background-color: $white;
+        overflow: auto;
+        @include transition(0.3s);
+    }
+    @media #{$sm}{
+        width: 360px;
+        left: -360px;
+    }
+    
+    &.active{
+        @media #{$md}{
+            left: 0;
+        }
+        @media #{$xs}{
+            left: 0;
+        }
+    }
+}
+
+
+
+.sidebar_close{
+    background: none;
+    border: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    
+    & span{
+        width: 30px;
+        height: 2px;
+        background-color: $body-color;
+        position: relative;
+        
+        &:nth-of-type(1){
+            @include transform(rotate(45deg));
+            top: -3px;
+        }
+        &:nth-of-type(2){
+            @include transform(rotate(-45deg));
+            top: -27px;
+        }
+    }
+}
+
+.single_sidebar{
+    background-color: $gray;
+    margin-top: 30px;
+    padding: 25px 30px;
+    
+    @media #{$md}{
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+    @media #{$xs}{
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding: 10px 15px;
+    }
+    
+    & .sidebar_title{
+        & .title{
+            font-size: 18px;
+            font-weight: 600;
+            position: relative;
+            
+            @media #{$xs}{
+                font-size: 16px;
+            }
+            
+            &::before{
+                position: absolute;
+                content: '';
+                width: 50%;
+                height: 2px;
+                right: 0;
+                top: 50%;
+                @include transform(translateY(-50%));
+                background-color: $theme-color;
+            }
+        }
+    }
+    & .sidebar_content{
+        
+        & li{
+            margin-top: 25px;
+            
+            & a{
+                font-size: 16px;
+                font-weight: 600;
+                color: $body-color;
+                display: block;
+                width: 100%;
+                line-height: 35px;
+                @include transition(0.3s);
+                
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+                
+                & span{ 
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    background-color: $theme-color-2;
+                    border-radius: 50%;
+                    text-align: center;
+                    float: right;
+                    @include transition(0.3s);
+                    font-size: 14px;
+                }
+                
+                &:hover{
+                    color: $theme-color;
+                    
+                    & span{
+                        background-color: $theme-color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.job_list_projects{
+    margin-top: 15px;
+}
+
+.projects_top_bar{
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 40px;
+    
+    & .projects_show{
+        padding-top: 15px;
+        
+        & p{
+            font-size: 16px;
+            color: $body-color;
+            font-weight: 600;
+        }
+    }
+    
+    & .projects_select{
+        padding-top: 15px;
+        
+        & .nice-select{
+            float: none;
+            border-radius: 5px;
+            width: auto;
+            padding: 0 30px;
+            height: 55px;
+            border: 0;
+            background-color: $theme-color-2;
+            text-transform: uppercase;
+
+            &::after{
+                width: 8px;
+                height: 8px;
+                right: 15px;
+                border-color: $theme-color;
+            }
+
+            & .current{
+                font-size: 15px;
+                color: $theme-color;
+                font-weight: 600;
+                line-height: 55px;
+            }
+            & .list{
+                width: 100%;
+                border-radius: 0;
+
+                & .option{
+                    font-size: 14px;
+                    color: $theme-color;
+                    line-height: 30px;
+                    min-height: 30px;
+                }
+            }
+        }
+    }
+}
+
+.job_projects{
+    padding-top: 30px;
+    
+    @media #{$md}{
+        padding-top: 0;
+    }
+    @media #{$xs}{
+        padding-top: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
